@@ -33,6 +33,6 @@ jobs:
         run: pnpm build
 
       - name: Publish to npm (alpha tag)
-        run: pnpm publish --tag alpha
+        run: pnpm publish --tag alpha --no-git-checks
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
